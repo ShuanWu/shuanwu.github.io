@@ -56,11 +56,7 @@
 
 
 
-  <title>
-  
-    歸檔 · Wonderland
-  
-</title>
+  <title> 中央氣象局天氣資訊爬蟲筆記 · Wonderland </title>
 </head>
 <body>
   <div class="progress">
@@ -230,63 +226,117 @@
         <div class="main-wrapper">
           
     
-    <div class="archive syuanpi fadeInUp" id="archive">
-        
-            <h1 class="archive-title">Total</h1>
-            <span class="archive-num">共計 5 篇文章</span>
-        
-        <div class="archive-list">
-            <ul>
-        
+  
+  <article class="
+  post
+   is_post 
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInUpShort back-1">
+        <div class="post-time-wrapper">
+          <span>2017-05-30</span>
+          
+          
             
-                
-                
-                
-                    
-                     
-                        <h2 class="archive-year"> 2019 </h2>
-                    
-                
-            
-            
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    01-16
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/2019/01/16/My-Gallery/">My Gallery</a>
-                </span>
-            </li>
-
-        
-            
-                
-                
-                
-            
-            
-            <li class="archive-post">
-                <span class="archive-post-time">
-                
-                    01-15
-                
-                </span>
-                <span class="archive-post-link">
-                    <a href="/2019/01/15/hello-world/">Hello World</a>
-                </span>
-            </li>
-
-        
-            </ul>
+          
         </div>
+      </div>
+      <h1 class="post-title syuanpi fadeInUpShort back-2">
+        
+          中央氣象局天氣資訊爬蟲筆記
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi fadeInUpShort back-3">
+      
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line">driver = webdriver.PhantomJS(executable_path=<span class="string">'/Users/shuanwu/anaconda2/pkgs/phantomjs-2.1.1-0/bin/phantomjs'</span>)</span><br><span class="line">driver.get(<span class="string">"http://www.cwb.gov.tw/V7/index.htm"</span>)</span><br><span class="line">time.sleep(<span class="number">3</span>)</span><br><span class="line">print(driver.find_element_by_id(<span class="string">"content"</span>).text)</span><br><span class="line">driver.close()</span><br></pre></td></tr></table></figure>
+<p>這個爬蟲的目的是為了要計算出即時的體感溫度。</p>
+<p>其計算方式採用斯戴德曼（R. G. Steadman）在1984年發表的《體感溫度的通用公式》，為</p>
+<p><br></p>
+<h2 style="color: red;"> 體感溫度 = （1.04 x 溫度）+ （0.2 x 水氣壓）- （0.65 x 風速） - 2.7 </h2>
+
+<p>其中還有水氣壓的計算公式如下：</p>
+<p><font size="3" color="#000080">待補</font></p>
+<p><br></p>
+<p>這個網站感覺蠻好的…<br><a href="http://pala.tw/python-web-crawler/" target="_blank" rel="noopener">http://pala.tw/python-web-crawler/</a><br>​希望可以成功抓到體感溫度計算所需的資訊</p>
+<p><br></p>
+<p><br><br>Reference:</p>
+<ul>
+<li><a href="http://cuiqingcai.com/1319.html" target="_blank" rel="noopener">http://cuiqingcai.com/1319.html</a></li>
+<li><a href="https://zh-tw.coursera.org/learn/python-network-data" target="_blank" rel="noopener">https://zh-tw.coursera.org/learn/python-network-data</a></li>
+<li><a href="http://www.jianshu.com/p/d2e15200ee9b" target="_blank" rel="noopener">http://www.jianshu.com/p/d2e15200ee9b</a></li>
+</ul>
+
+      
+    
     </div>
     
-  <nav class="pagination">
-      <span class="page-number current">1</span>
+      
+
+      
+  <hr class="copy-line">
+  <div class="post-copyright">
+    <div class="copy-author">
+      <span>作家 :</span>
+      <span>ShuanWu</span>
+    </div>
+    <div class="copy-url">
+      <span>網路地址 :</span>
+      <a href="https://shuanwu.github.io/2017/05/30/weather_scrapy/">https://shuanwu.github.io/2017/05/30/weather_scrapy/</a>
+    </div>
+    <div class="copy-origin">
+      <span>目標 :</span>
+      <a href="https://shuanwu.github.io">https://shuanwu.github.io</a>
+    </div>
+    <div class="copy-license">
+      
+      著作权归作者所有，转载请联系作者获得授权。
+    </div>
+  </div>
+
+    
+  </article>
+  
+    
+  <nav class="article-page">
+    
+      <a href="/2017/05/31/python_coexist/" id="art-left" class="art-left">
+        <span class="next-title">
+          <i class="iconfont icon-left"></i>Python2 與 Python3 共存於 Ipython裡
+        </span>
+      </a>
+    
+    
   </nav>
 
+    
+  <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
+  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+    
+    
+    
+
+    
+
+  </div>
+
+
+
+  
+  
+    
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>文章目錄</span></span>
+    <div class="toc-inner syuanpi back-1" style="display:none;">
+      <li class="title-link"><a href="javascript:;" class="toTop">中央氣象局天氣資訊爬蟲筆記</a></li>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text"> 體感溫度 = （1.04 x 溫度）+ （0.2 x 水氣壓）- （0.65 x 風速） - 2.7 </span></a></li></ol>
+    </div>
+  </aside>
+
+
+
+  
 
 
         </div>
